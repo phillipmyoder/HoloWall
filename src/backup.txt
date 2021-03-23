@@ -1,0 +1,11 @@
+<button onClick = {(e) => addToList(e, "Rushia")}>Rushia</button>
+          <button onClick = {(e) => addToList(e, "Noel")}>Noel</button>
+          <button onClick = {(e) => addToList(e, "Shion")}>Shion</button>
+          
+          <button onClick = {(e) => addToList(e, "Coco")}>Coco</button>
+          <button onClick = {(e) => addToList(e, "Lamy")}>Lamy</button>
+          <button onClick = {(e) => addToList(e, "Suisei")}>Suisei</button>
+          
+          <button onClick = {(e) => addToList(e, "Matsuri")}>Matsuri</button>
+          <button onClick = {(e) => addToList(e, "Kanata")}>Kanata</button>
+          <button onClick = {(e) => addToList(e, "Choco")}>Choco</button>

@@ -28,6 +28,85 @@
   color: #61dafb;
 }
 
+.row-1 {
+  position: relative;
+  display: block;
+  transform: translate(250%, 60%);
+  height: 200px;
+  width: 200px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-width: thin;
+}
+
+.btn{
+  position: relative;
+  display: block;
+  transform: translate(982%, -2350%);
+  margin: 4px 2px;
+  background-color: #4C8BF5;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.top-box{
+  position: relative;
+  display: block;
+  background-color:  #4C8BF5;
+  color: white;
+  width: 575px;
+  padding: 25px;
+  transform: translate(81%, -1750%);
+}
+
+.row-2 {
+  position: relative;
+  display: block;
+  transform: translate(354%, -255%);
+  height: 200px;
+  width: 200px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-width: thin;
+}
+
+.row-3 {
+  position: relative;
+  display: block;
+  transform: translate(460%, -570%);
+  height: 200px;
+  width: 200px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-width: thin;
+}
+
+.subaru {
+  
+  
+  height: 200px;
+  width: 200px;
+  transform: translate(80%, 10%);
+}
+
+.random-subaru{
+  
+  transform: translate(1%, 800%);
+}
+
+.test{
+  overflow: hidden;
+}
+
+.pages-color{
+  color: red;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

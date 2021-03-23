@@ -43,6 +43,7 @@ function Home (){
             alert("Correct!");
             window.location = "/Pages";
             break;
+            
           }
           j++;
         }

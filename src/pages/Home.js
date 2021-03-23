@@ -32,6 +32,7 @@ function Home (){
             if(sortedTestList[i] !== sortedCorrectList[i]){
               alert("Wrong!!");
               window.location = "/";
+              break;
             }// end if
             
             i++;
@@ -41,6 +42,7 @@ function Home (){
           if(sortedTestList[j] === sortedCorrectList[j]){
             alert("Correct!");
             window.location = "/Pages";
+            break;
           }
           j++;
         }

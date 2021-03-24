@@ -17,6 +17,8 @@ var correctList = ["Rushia", "Matsuri", "Kanata", "Shion", "Suisei" ];
 function Home (){
     function addToList(e, x) {
         testList.push(x);
+        let target = e.currentTarget;
+        target.classList.toggle('selected')
       }
     
       function compareLists(e, testList, correctList) {
@@ -64,7 +66,7 @@ function Home (){
 
           <button onClick = {(e) => compareLists(e, testList, correctList)} class = "btn">Verify</button>
           <h4 class = "top-box">Select all squares with <br/>WALLS <br/>then select Verify.</h4>
-          
+
           <h5 class="random-subaru">You shouldn't be down here!</h5>
 
           <img src = {Subaru} alt="Random Subaru" class = "subaru"></img>

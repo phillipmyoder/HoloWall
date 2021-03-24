@@ -29,7 +29,7 @@
 }
 
 .row-1 {
-  position: relative;
+  position: static;
   display: block;
   transform: translate(250%, 60%);
   height: 200px;
@@ -38,6 +38,12 @@
   border-style: solid;
   border-width: thin;
   cursor: pointer;
+}
+
+.selected {
+  border: 2px solid blue;
+  border-style: solid;
+  border-width: thin;
 }
 
 .btn{
@@ -56,7 +62,7 @@
 }
 
 .top-box{
-  position: absolute;
+  position: static;
   display: block;
   background-color:  #4C8BF5;
   color: white;
@@ -66,7 +72,7 @@
 }
 
 .row-2 {
-  position: relative;
+  position: static;
   display: block;
   transform: translate(354%, -255%);
   height: 200px;
@@ -88,7 +94,6 @@
   border-width: thin;
   cursor: pointer;
 }
-
 
 .subaru {
   height: 200px;

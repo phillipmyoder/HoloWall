@@ -32,6 +32,7 @@ function Home (){
             if(sortedTestList[i] !== sortedCorrectList[i]){
               alert("Wrong!!");
               window.location = "/";
+              break;
             }// end if
             
             i++;
@@ -41,6 +42,7 @@ function Home (){
           if(sortedTestList[j] === sortedCorrectList[j]){
             alert("Correct!");
             window.location = "/Pages";
+            break;
           }
           j++;
         }
@@ -62,6 +64,7 @@ function Home (){
 
           <button onClick = {(e) => compareLists(e, testList, correctList)} class = "btn">Verify</button>
           <h4 class = "top-box">Select all squares with <br/>WALLS <br/>then select Verify.</h4>
+          
           <h5 class="random-subaru">You shouldn't be down here!</h5>
 
           <img src = {Subaru} alt="Random Subaru" class = "subaru"></img>

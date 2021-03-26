@@ -28,6 +28,10 @@
   color: #61dafb;
 }
 
+.checkbox-gone{
+  display: none;
+}
+
 .row-1 {
   position: static;
   display: block;
@@ -62,7 +66,7 @@
 }
 
 .top-box{
-  position: static;
+  position: fixed;
   display: block;
   background-color:  #4C8BF5;
   color: white;

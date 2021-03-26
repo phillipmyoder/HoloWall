@@ -11,60 +11,67 @@ import Suisei from './images/suisei.png';
 import Choco from './images/choco.png';
 import Subaru from './images/subaru.png';
 
-var testList = [];
-var correctList = ["Rushia", "Matsuri", "Kanata", "Shion", "Suisei" ];
+var correctList = ["Kanata", "Matsuri", "Rushia", "Shion", "Suisei" ];
 
 function Home (){
-    function addToList(e, x) {
-        testList.push(x);
-        let target = e.currentTarget;
-        target.classList.toggle('selected')
-      }
-    
-      function compareLists(e, testList, correctList) {
-        var sortedTestList = testList.sort();
+      function compareLists (e) {
+        var form = document.getElementById("wall"),
+        inputs = form.getElementsByTagName("input");
+        var testList = [];
+        
+        for (var i = 0, max = inputs.length; i < max; i++){
+          if(inputs[i].type === "checkbox" && inputs[i].checked){
+            testList.push(inputs[i].id);
+            //console.log(arr[arr.length - 1]);
+          }
+        }
+        /**
+         *  var sortedTestList = testList.sort();
         var sortedCorrectList = correctList.sort()
-        if(sortedTestList.length === 0 || sortedTestList.length > sortedCorrectList.length || sortedTestList.length < sortedCorrectList.length){
-          alert("Wrong!");
-          window.location = "/";
-        } // end wrong size if
-        if(sortedTestList.length === sortedCorrectList.length){
-          var i = 0;
-          while (i <= 4) {
-            if(sortedTestList[i] !== sortedCorrectList[i]){
-              alert("Wrong!!");
-              window.location = "/";
-              break;
-            }// end if
-            
-            i++;
-          }// end while
-          var j = 0;
-          while(j<=4){
-          if(sortedTestList[j] === sortedCorrectList[j]){
+         */
+
+        var sortedArrList = testList.sort();
+        for(var j = 0, max2 = testList.length; j < max2; j++){
+          if(sortedArrList[j] === correctList[j]){
             alert("Correct!");
             window.location = "/Pages";
-            break;
           }
-          j++;
+          else{
+            alert("Wrong!");
+            window.location = "/";
+          }
         }
-        }// end if
+        //console.log(e.target.id);
       }
     return(
         <div class = "test">
-          <img onClick = {(e) => addToList(e, "Rushia")} src={Rushia} alt="Rushia" class = "row-1"  />
-          <img onClick = {(e) => addToList(e, "Noel")} src={Noel} alt="Noel" class = "row-1"/>
-          <img onClick = {(e) => addToList(e, "Shion")} src={Shion} alt="Shion" class = "row-1"/>
+          <form id = "wall">
+          <input type = "checkbox" id = "Rushia" className = "checkbox-gone" />
+          <label for = "Rushia"><img src = {Rushia} className = "row-1" alt = "Rushia"></img></label>
+          <input type = "checkbox" id = "Noel" className = "checkbox-gone" />
+          <label for = "Noel"><img src = {Noel} className = "row-1" alt = "Noel"></img></label>
+          <input type = "checkbox" id = "Shion" className = "checkbox-gone" />
+          <label for = "Shion"><img src = {Shion} className = "row-1" alt = "Shion"></img></label>
           
-          <img onClick = {(e) => addToList(e, "Coco")} src={Coco} alt="Coco" class = "row-2" />
-          <img onClick = {(e) => addToList(e, "Lamy")} src={Lamy} alt="Lamy" class = "row-2"/>
-          <img onClick = {(e) => addToList(e, "Suisei")} src={Suisei} alt="Suisei" class = "row-2"/>
-
-          <img onClick = {(e) => addToList(e, "Matsuri")} src={Matsuri} alt="Matsuri" class = "row-3"/>
-          <img onClick = {(e) => addToList(e, "Kanata")} src={Kanata} alt="Kanata" class = "row-3"/>
-          <img onClick = {(e) => addToList(e, "Choco")} src={Choco} alt="Choco" class = "row-3"/>
-
-          <button onClick = {(e) => compareLists(e, testList, correctList)} class = "btn">Verify</button>
+          <input type = "checkbox" id = "Coco" className = "checkbox-gone" />
+          <label for = "Coco"><img src = {Coco} className = "row-2" alt = "Coco"></img></label>
+          <input type = "checkbox" id = "Lamy" className = "checkbox-gone" />
+          <label for = "Lamy"><img src = {Lamy} className = "row-2" alt = "Lamy"></img></label>
+          <input type = "checkbox" id="Suisei" className = "checkbox-gone" />
+          <label for = "Suisei"><img src = {Suisei} className = "row-2" alt = "Suisei"></img></label>
+          
+          <input type = "checkbox" id = "Matsuri" className = "checkbox-gone" />
+          <label for = "Matsuri"><img src = {Matsuri} className = "row-3" alt = "Matsuri"></img></label>
+          <input type = "checkbox" id = "Kanata" className = "checkbox-gone" />
+          <label for = "Kanata"><img src = {Kanata} className = "row-3" alt = "Kanata"></img></label>
+          <input type = "checkbox" id = "Choco" className = "checkbox-gone" />
+          <label for = "Choco"><img src = {Choco} className = "row-3" alt = "Coco"></img></label>
+          
+          
+          </form>
+          
+          <button onClick = {(e) => compareLists(e)} class = "btn"> Verify </button>
+          
           <h4 class = "top-box">Select all squares with <br/>WALLS <br/>then select Verify.</h4>
 
           <h5 class="random-subaru">You shouldn't be down here!</h5>

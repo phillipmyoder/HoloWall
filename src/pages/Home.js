@@ -26,17 +26,29 @@ function Home (){
         }
 
         var sortedArrList = testList.sort();
+        var correct = 0;
         for(var j = 0, max2 = testList.length; j < max2; j++){
+          console.log(sortedArrList[j] + " " + correctList[j]);
           if(sortedArrList[j] === correctList[j]){
-            alert("Correct!");
-            window.location = "/Pages";
-            break;
+            correct++;
+            //window.location = "/Pages";
+            //break;
           }
+          
           else{
-            alert("Wrong!");
-            window.location = "/";
-            break;
+            correct --;
+            //window.location = "/";
+            //break;
           }
+        }
+        if(correct == 5)
+        {
+          alert("Correct!");
+          window.location = "/Pages";
+        }
+        else{
+          alert("Wrong!");
+          window.location = "/";
         }
         //console.log(e.target.id);
       }

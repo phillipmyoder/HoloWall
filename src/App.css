@@ -30,6 +30,7 @@
 
 .checkbox-gone{
   display: none;
+  
 }
 
 .row-1 {
@@ -45,9 +46,18 @@
 }
 
 .selected {
-  border: 2px solid blue;
+  position: static;
+  display: block;
+  transform: translate(250%, 60%);
+  height: 200px;
+  width: 200px;
+  margin-bottom: 11px;
+  margin-left: -5px;
   border-style: solid;
   border-width: thin;
+  cursor: pointer;
+  border: 2px solid red;
+  
 }
 
 .btn{
@@ -66,13 +76,15 @@
 }
 
 .top-box{
-  position: fixed;
+  position: absolute;
+  margin: 20px auto 0 auto;
   display: block;
   background-color:  #4C8BF5;
   color: white;
   width: 575px;
   padding: 25px;
   transform: translate(81%, -1750%);
+  
 }
 
 .row-2 {

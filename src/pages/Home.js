@@ -22,50 +22,48 @@ function Home (){
         for (var i = 0, max = inputs.length; i < max; i++){
           if(inputs[i].type === "checkbox" && inputs[i].checked){
             testList.push(inputs[i].id);
-            //console.log(arr[arr.length - 1]);
           }
         }
-        /**
-         *  var sortedTestList = testList.sort();
-        var sortedCorrectList = correctList.sort()
-         */
 
         var sortedArrList = testList.sort();
         for(var j = 0, max2 = testList.length; j < max2; j++){
           if(sortedArrList[j] === correctList[j]){
             alert("Correct!");
             window.location = "/Pages";
+            break;
           }
           else{
             alert("Wrong!");
             window.location = "/";
+            break;
           }
         }
         //console.log(e.target.id);
       }
+
     return(
         <div class = "test">
           <form id = "wall">
           <input type = "checkbox" id = "Rushia" className = "checkbox-gone" />
-          <label for = "Rushia"><img src = {Rushia} className = "row-1" alt = "Rushia"></img></label>
+          <label for = "Rushia"><img src = {Rushia} className = "row-1" alt = "Rushia" ></img></label>
           <input type = "checkbox" id = "Noel" className = "checkbox-gone" />
-          <label for = "Noel"><img src = {Noel} className = "row-1" alt = "Noel"></img></label>
+          <label for = "Noel"><img src = {Noel} className = "row-1" alt = "Noel" ></img></label>
           <input type = "checkbox" id = "Shion" className = "checkbox-gone" />
-          <label for = "Shion"><img src = {Shion} className = "row-1" alt = "Shion"></img></label>
+          <label for = "Shion"><img src = {Shion} className = "row-1" alt = "Shion" ></img></label>
           
           <input type = "checkbox" id = "Coco" className = "checkbox-gone" />
-          <label for = "Coco"><img src = {Coco} className = "row-2" alt = "Coco"></img></label>
+          <label for = "Coco"><img src = {Coco} className = "row-2" alt = "Coco" ></img></label>
           <input type = "checkbox" id = "Lamy" className = "checkbox-gone" />
-          <label for = "Lamy"><img src = {Lamy} className = "row-2" alt = "Lamy"></img></label>
+          <label for = "Lamy"><img src = {Lamy} className = "row-2" alt = "Lamy" ></img></label>
           <input type = "checkbox" id="Suisei" className = "checkbox-gone" />
-          <label for = "Suisei"><img src = {Suisei} className = "row-2" alt = "Suisei"></img></label>
+          <label for = "Suisei"><img src = {Suisei} className = "row-2" alt = "Suisei" ></img></label>
           
           <input type = "checkbox" id = "Matsuri" className = "checkbox-gone" />
-          <label for = "Matsuri"><img src = {Matsuri} className = "row-3" alt = "Matsuri"></img></label>
+          <label for = "Matsuri"><img src = {Matsuri} className = "row-3" alt = "Matsuri" ></img></label>
           <input type = "checkbox" id = "Kanata" className = "checkbox-gone" />
-          <label for = "Kanata"><img src = {Kanata} className = "row-3" alt = "Kanata"></img></label>
+          <label for = "Kanata"><img src = {Kanata} className = "row-3" alt = "Kanata" ></img></label>
           <input type = "checkbox" id = "Choco" className = "checkbox-gone" />
-          <label for = "Choco"><img src = {Choco} className = "row-3" alt = "Coco"></img></label>
+          <label for = "Choco"><img src = {Choco} className = "row-3" alt = "Choco" ></img></label>
           
           
           </form>

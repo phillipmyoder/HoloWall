@@ -28,6 +28,10 @@
   color: #61dafb;
 }
 
+.checkbox-gone{
+  display: none;
+}
+
 .row-1 {
   position: static;
   display: block;
@@ -38,12 +42,6 @@
   border-style: solid;
   border-width: thin;
   cursor: pointer;
-}
-
-.selected {
-  border: 2px solid blue;
-  border-style: solid;
-  border-width: thin;
 }
 
 .btn{
@@ -62,13 +60,15 @@
 }
 
 .top-box{
-  position: static;
+  position: absolute;
+  margin: 20px auto 0 auto;
   display: block;
   background-color:  #4C8BF5;
   color: white;
   width: 575px;
   padding: 25px;
   transform: translate(81%, -1750%);
+  
 }
 
 .row-2 {
@@ -114,6 +114,11 @@
 .pages-color{
   color: red;
 }
+
+.tweet-Tester{
+  font-size: larger;
+}
+
 
 @keyframes App-logo-spin {
   from {

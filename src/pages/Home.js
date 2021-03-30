@@ -41,7 +41,7 @@ function Home (){
             //break;
           }
         }
-        if(correct == 5)
+        if(correct === 5)
         {
           alert("Correct!");
           window.location = "/Pages";
@@ -53,40 +53,59 @@ function Home (){
         //console.log(e.target.id);
       }
 
+      function mark(el){
+        
+//        el.style.border = "1px solid blue";
+        var form = document.getElementById("wall"),
+        inputs = form.getElementsByTagName("img"),
+        inputs2 = form.getElementsByTagName("input");
+        
+        var ids = el.target.id;
+        console.log(inputs[ids]);
+        //inputs[0].className = "selected";
+        console.log("Selected");
+        if(inputs2[ids].checked === false){
+          document.getElementById(ids).style.border = "1px solid blue";
+        }
+        else{
+          document.getElementById(ids).style.border = "1px solid black";
+        }
+      }
+
     return(
         <div class = "test">
           <form id = "wall">
           <input type = "checkbox" id = "Rushia" className = "checkbox-gone" />
-          <label for = "Rushia"><img src = {Rushia} className = "row-1" alt = "Rushia" ></img></label>
+          <label for = "Rushia"><img src = {Rushia} id = "0" className = "row-1" alt = "Rushia" onClick={(e) => mark(e)} /></label>
           <input type = "checkbox" id = "Noel" className = "checkbox-gone" />
-          <label for = "Noel"><img src = {Noel} className = "row-1" alt = "Noel" ></img></label>
+          <label for = "Noel"><img src = {Noel} id = "1" className = "row-1" alt = "Noel" onClick={(e) => mark(e)} /></label>
           <input type = "checkbox" id = "Shion" className = "checkbox-gone" />
-          <label for = "Shion"><img src = {Shion} className = "row-1" alt = "Shion" ></img></label>
+          <label for = "Shion"><img src = {Shion} id = "2" className = "row-1" alt = "Shion" onClick={(e) => mark(e)} /></label>
           
           <input type = "checkbox" id = "Coco" className = "checkbox-gone" />
-          <label for = "Coco"><img src = {Coco} className = "row-2" alt = "Coco" ></img></label>
+          <label for = "Coco"><img src = {Coco} id = "3" className = "row-2" alt = "Coco" onClick={(e) => mark(e)} /></label>
           <input type = "checkbox" id = "Lamy" className = "checkbox-gone" />
-          <label for = "Lamy"><img src = {Lamy} className = "row-2" alt = "Lamy" ></img></label>
+          <label for = "Lamy"><img src = {Lamy} id = "4" className = "row-2" alt = "Lamy" onClick={(e) => mark(e)} /></label>
           <input type = "checkbox" id="Suisei" className = "checkbox-gone" />
-          <label for = "Suisei"><img src = {Suisei} className = "row-2" alt = "Suisei" ></img></label>
+          <label for = "Suisei"><img src = {Suisei} id = "5" className = "row-2" alt = "Suisei" onClick={(e) => mark(e)} /></label>
           
           <input type = "checkbox" id = "Matsuri" className = "checkbox-gone" />
-          <label for = "Matsuri"><img src = {Matsuri} className = "row-3" alt = "Matsuri" ></img></label>
+          <label for = "Matsuri"><img src = {Matsuri} id = "6" className = "row-3" alt = "Matsuri" onClick={(e) => mark(e)} /></label>
           <input type = "checkbox" id = "Kanata" className = "checkbox-gone" />
-          <label for = "Kanata"><img src = {Kanata} className = "row-3" alt = "Kanata" ></img></label>
+          <label for = "Kanata"><img src = {Kanata} id = "7" className = "row-3" alt = "Kanata" onClick={(e) => mark(e)} /></label>
           <input type = "checkbox" id = "Choco" className = "checkbox-gone" />
-          <label for = "Choco"><img src = {Choco} className = "row-3" alt = "Choco" ></img></label>
+          <label for = "Choco"><img src = {Choco} id = "8" className = "row-3" alt = "Choco" onClick={(e) => mark(e)} /></label>
           
           
           </form>
           
           <button onClick = {(e) => compareLists(e)} class = "btn"> Verify </button>
           
-          <h4 class = "top-box">Select all squares with <br/>WALLS <br/>then select Verify.</h4>
+          <h4 className = "top-box">Select all squares with <br/>WALLS <br/>then select Verify.</h4>
 
-          <h5 class="random-subaru">You shouldn't be down here!</h5>
+          <h5 className ="random-subaru">You shouldn't be down here!</h5>
 
-          <img src = {Subaru} alt="Random Subaru" class = "subaru"></img>
+          <img src = {Subaru} alt="Random Subaru" className = "subaru"></img>
           
         </div>
         

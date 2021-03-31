@@ -14,7 +14,7 @@ import Subaru from './images/subaru.png';
 var correctList = ["Kanata", "Matsuri", "Rushia", "Shion", "Suisei" ];
 
 function Home (){
-      function compareLists (e) {
+      function compareLists () {
         var form = document.getElementById("wall"),
         inputs = form.getElementsByTagName("input");
         var testList = [];
@@ -31,14 +31,10 @@ function Home (){
           console.log(sortedArrList[j] + " " + correctList[j]);
           if(sortedArrList[j] === correctList[j]){
             correct++;
-            //window.location = "/Pages";
-            //break;
           }
           
           else{
             correct --;
-            //window.location = "/";
-            //break;
           }
         }
         if(correct === 5)
@@ -54,15 +50,12 @@ function Home (){
       }
 
       function mark(el){
-        
-//        el.style.border = "1px solid blue";
         var form = document.getElementById("wall"),
-        inputs = form.getElementsByTagName("img"),
         inputs2 = form.getElementsByTagName("input");
         
         var ids = el.target.id;
-        console.log(inputs[ids]);
-        //inputs[0].className = "selected";
+        //console.log(inputs2);
+        //inputs[ids].className = "selected";
         console.log("Selected");
         if(inputs2[ids].checked === false){
           document.getElementById(ids).style.border = "1px solid blue";
@@ -73,37 +66,37 @@ function Home (){
       }
 
     return(
-        <div class = "test">
+        <div className = "test">
           <form id = "wall">
           <input type = "checkbox" id = "Rushia" className = "checkbox-gone" />
-          <label for = "Rushia"><img src = {Rushia} id = "0" className = "row-1" alt = "Rushia" onClick={(e) => mark(e)} /></label>
+          <label htmlFor = "Rushia"><img src = {Rushia} id = "0" className = "row-1" alt = "Rushia" onClick={(e) => mark(e)} /></label>
           <input type = "checkbox" id = "Noel" className = "checkbox-gone" />
-          <label for = "Noel"><img src = {Noel} id = "1" className = "row-1" alt = "Noel" onClick={(e) => mark(e)} /></label>
+          <label htmlFor = "Noel"><img src = {Noel} id = "1" className = "row-1" alt = "Noel" onClick={(e) => mark(e)} /></label>
           <input type = "checkbox" id = "Shion" className = "checkbox-gone" />
-          <label for = "Shion"><img src = {Shion} id = "2" className = "row-1" alt = "Shion" onClick={(e) => mark(e)} /></label>
+          <label htmlFor = "Shion"><img src = {Shion} id = "2" className = "row-1" alt = "Shion" onClick={(e) => mark(e)} /></label>
           
           <input type = "checkbox" id = "Coco" className = "checkbox-gone" />
-          <label for = "Coco"><img src = {Coco} id = "3" className = "row-2" alt = "Coco" onClick={(e) => mark(e)} /></label>
+          <label htmlFor = "Coco"><img src = {Coco} id = "3" className = "row-2" alt = "Coco" onClick={(e) => mark(e)} /></label>
           <input type = "checkbox" id = "Lamy" className = "checkbox-gone" />
-          <label for = "Lamy"><img src = {Lamy} id = "4" className = "row-2" alt = "Lamy" onClick={(e) => mark(e)} /></label>
+          <label htmlFor = "Lamy"><img src = {Lamy} id = "4" className = "row-2" alt = "Lamy" onClick={(e) => mark(e)} /></label>
           <input type = "checkbox" id="Suisei" className = "checkbox-gone" />
-          <label for = "Suisei"><img src = {Suisei} id = "5" className = "row-2" alt = "Suisei" onClick={(e) => mark(e)} /></label>
+          <label htmlFor = "Suisei"><img src = {Suisei} id = "5" className = "row-2" alt = "Suisei" onClick={(e) => mark(e)} /></label>
           
           <input type = "checkbox" id = "Matsuri" className = "checkbox-gone" />
-          <label for = "Matsuri"><img src = {Matsuri} id = "6" className = "row-3" alt = "Matsuri" onClick={(e) => mark(e)} /></label>
+          <label htmlFor = "Matsuri"><img src = {Matsuri} id = "6" className = "row-3" alt = "Matsuri" onClick={(e) => mark(e)} /></label>
           <input type = "checkbox" id = "Kanata" className = "checkbox-gone" />
-          <label for = "Kanata"><img src = {Kanata} id = "7" className = "row-3" alt = "Kanata" onClick={(e) => mark(e)} /></label>
+          <label htmlFor = "Kanata"><img src = {Kanata} id = "7" className = "row-3" alt = "Kanata" onClick={(e) => mark(e)} /></label>
           <input type = "checkbox" id = "Choco" className = "checkbox-gone" />
-          <label for = "Choco"><img src = {Choco} id = "8" className = "row-3" alt = "Choco" onClick={(e) => mark(e)} /></label>
+          <label htmlFor = "Choco"><img src = {Choco} id = "8" className = "row-3" alt = "Choco" onClick={(e) => mark(e)} /></label>
           
           
           </form>
           
-          <button onClick = {(e) => compareLists(e)} class = "btn"> Verify </button>
+          <button onClick = {() => compareLists()} className = "btn"> Verify </button>
           
           <h4 className = "top-box">Select all squares with <br/>WALLS <br/>then select Verify.</h4>
 
-          <h5 className ="random-subaru">You shouldn't be down here!</h5>
+          <h5 className ="random-subaru">You shouldn&apos;t be down here!</h5>
 
           <img src = {Subaru} alt="Random Subaru" className = "subaru"></img>
           

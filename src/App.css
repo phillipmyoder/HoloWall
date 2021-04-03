@@ -44,6 +44,34 @@
   cursor: pointer;
 }
 
+.row-2 {
+  position: static;
+  display: block;
+  transform: translate(354%, -255%);
+  height: 200px;
+  width: 200px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-width: thin;
+  cursor: pointer;
+}
+
+.row-3 {
+  position: relative;
+  display: block;
+  transform: translate(460%, -570%);
+  height: 200px;
+  width: 200px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-width: thin;
+  cursor: pointer;
+}
+
+.selected {
+  border-color: #4C8BF5;
+}
+
 .btn{
   position: relative;
   display: block;
@@ -71,29 +99,9 @@
   
 }
 
-.row-2 {
-  position: static;
-  display: block;
-  transform: translate(354%, -255%);
-  height: 200px;
-  width: 200px;
-  margin-bottom: 10px;
-  border-style: solid;
-  border-width: thin;
-  cursor: pointer;
-}
 
-.row-3 {
-  position: relative;
-  display: block;
-  transform: translate(460%, -570%);
-  height: 200px;
-  width: 200px;
-  margin-bottom: 10px;
-  border-style: solid;
-  border-width: thin;
-  cursor: pointer;
-}
+
+
 
 .subaru {
   height: 200px;

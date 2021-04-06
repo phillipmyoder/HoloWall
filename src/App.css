@@ -48,7 +48,7 @@
 }
 
 .column{
-  padding: 0 4px;
+  padding: 0 6px;
   
 }
 
@@ -92,6 +92,8 @@
 
 .selected {
   border-color: #4C8BF5;
+  outline: #4C8BF5 solid 4px;
+  
 }
 
 .btn{

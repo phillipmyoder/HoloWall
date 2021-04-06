@@ -42,8 +42,9 @@ function Home (){
 
     return(
         <div className = "test">
-          <form id = "wall">
-          
+          <h4 className = "top-box">Select all squares with <br/>WALLS <br/>then select Verify.</h4>
+          <div className = "row">
+          <div className = "column">
           <img 
           src = {Rushia} 
           className = {"row-1 " + (rushia ? "selected" : " ")}
@@ -59,8 +60,9 @@ function Home (){
           className = {"row-1 " + (shion ? "selected" : " ")}
           alt = "Shion" 
           onClick={() => setShion(!shion)} />
+          </div>
           
-          
+          <div className = "column">
           <img src = {Coco}
           className = {"row-2 " + (coco ? "selected" : " ")}
           alt = "Coco" 
@@ -75,13 +77,13 @@ function Home (){
           className = {"row-2 " + (suisei ? "selected" : " ")}
           alt = "Suisei" 
           onClick={() => setSuisei(!suisei)} />
+          </div>
           
-          
+          <div className = "column">
           <img src = {Matsuri}
           className = {"row-3 " + (matsuri ? "selected" : " ")}
           alt = "Matsuri" 
           onClick={() => setMatsuri(!matsuri)} />
-
           
           <img src = {Kanata} 
           className = {"row-3 " + (kanata ? "selected" : " ")}
@@ -93,12 +95,10 @@ function Home (){
           alt = "Choco" 
           onClick={() => setChoco(!choco)} />
           
-          
-          </form>
-          
           <button onClick = {() => compareLists()} className = "btn"> Verify </button>
+          </div>
           
-          <h4 className = "top-box">Select all squares with <br/>WALLS <br/>then select Verify.</h4>
+          </div>
 
           <h5 className ="random-subaru">You shouldn&apos;t be down here!</h5>
 

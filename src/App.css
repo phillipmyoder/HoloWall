@@ -32,22 +32,45 @@
   display: none;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 12vw);
+  grid-gap: 15px;
+}
+
+.row{
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 4px;
+  margin-left: 500px;
+  
+}
+
+.column{
+  padding: 0 4px;
+  
+}
+
+.column-img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
 .row-1 {
-  position: static;
   display: block;
-  transform: translate(250%, 60%);
   height: 200px;
   width: 200px;
   margin-bottom: 10px;
   border-style: solid;
   border-width: thin;
   cursor: pointer;
+  
 }
 
 .row-2 {
-  position: static;
   display: block;
-  transform: translate(354%, -255%);
   height: 200px;
   width: 200px;
   margin-bottom: 10px;
@@ -59,7 +82,6 @@
 .row-3 {
   position: relative;
   display: block;
-  transform: translate(460%, -570%);
   height: 200px;
   width: 200px;
   margin-bottom: 10px;
@@ -75,7 +97,7 @@
 .btn{
   position: relative;
   display: block;
-  transform: translate(982%, -2350%);
+  
   margin: 4px 2px;
   background-color: #4C8BF5;
   border: none;
@@ -84,24 +106,19 @@
   text-align: center;
   text-decoration: none;
   font-size: 16px;
+  margin-left: 99px;
   cursor: pointer;
 }
 
 .top-box{
-  position: absolute;
-  margin: 20px auto 0 auto;
-  display: block;
+  text-align: left;
+  padding: 32px;
   background-color:  #4C8BF5;
   color: white;
-  width: 575px;
-  padding: 25px;
-  transform: translate(81%, -1750%);
-  
+  width: 565px;
+  height: 60px;
+  margin-left: 505px;
 }
-
-
-
-
 
 .subaru {
   height: 200px;

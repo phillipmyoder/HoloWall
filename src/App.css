@@ -119,31 +119,48 @@
   color: white;
   width: 565px;
   height: 60px;
-  margin-left: 505px;
+  margin-left: 510px;
 }
 
 .subaru {
+  position: fixed;
   height: 200px;
   width: 200px;
-  transform: translate(80%, 10%);
+  transform: translate(80%, 300%);
 }
-
-.random-subaru{
-  
-  transform: translate(1%, 800%);
-}
-
 
 .test{
   overflow: hidden;
 }
 
+.pages-title{
+  color: red;
+  transform: translate(45%);
+}
+
 .pages-color{
   color: red;
+  transform: translate(34%);
 }
 
 .tweet-Tester{
-  font-size: larger;
+  transform: translate(10%);
+}
+
+.pages-btn {
+  position: relative;
+  display: block;
+  
+  margin: 4px 2px;
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transform: translate(450%);
+  cursor: pointer;
 }
 
 

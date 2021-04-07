@@ -100,10 +100,11 @@ function Home (){
           
           </div>
 
-          <h5 className ="random-subaru">You shouldn&apos;t be down here!</h5>
+          {/*<h5 className ="random-subaru">You shouldn&apos;t be down here!</h5>*/}
 
+          <a href = "https://www.youtube.com/watch?v=zVhyvgcLaAY&t=6s">
           <img src = {Subaru} alt="Random Subaru" className = "subaru"></img>
-          
+          </a>
         </div>
         
       )

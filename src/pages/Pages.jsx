@@ -20,5 +20,4 @@ function Pages (){
         </div>
     );
 }
-//@Im0kenp1
 export default Pages;
